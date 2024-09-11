@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Name</title>
+    <link rel="stylesheet" href="../css/main.css"> <!-- CSSのパス修正 -->
+</head>
+<body>
+
+    <!-- ヘッダーの挿入 -->
+    <div id="header"></div>
+
+    <main>
+        <h1>Welcome to ProjectName-YYYYMMDD</h1>
+        <p>This is a simple project template.</p>
+    </main>
+
+    <!-- フッターの挿入 -->
+    <div id="footer"></div>
+
+    <script src="../js/main.js"></script> <!-- JavaScriptのパス修正 -->
+
+    <!-- 外部HTMLファイルを読み込むスクリプト -->
+    <script>
+        // header.htmlを読み込む
+        fetch('../components/header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+
+        // footer.htmlを読み込む
+        fetch('../components/footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+
+</body>
+</html>
