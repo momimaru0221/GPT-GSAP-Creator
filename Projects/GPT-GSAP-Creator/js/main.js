@@ -1,8 +1,6 @@
-document.addEventListener("DOMContentLoaded", (event) => {
-    gsap.registerPlugin(Flip,ScrollTrigger,Observer,ScrollToPlugin,Draggable,MotionPathPlugin,EaselPlugin,PixiPlugin,TextPlugin,DrawSVGPlugin,ScrollSmoother,GSDevTools,InertiaPlugin,MorphSVGPlugin,MotionPathHelper,Physics2DPlugin,PhysicsPropsPlugin,ScrambleTextPlugin,SplitText,RoughEase,ExpoScaleEase,SlowMo,CustomEase,CustomBounce,CustomWiggle)
-    // gsap code here!
-    var morph = gsap.to("#takoyaki", { duration: 5, morphSVG:"#octopus", repeat:1, yoyo:true, repeatDelay:0.2})
-    document.getElementById("play").onclick = function(){
-        morph.restart(true);
-    }
-});
+function morphImages(image1, shape1, shape2, image2) {
+    gsap.timeline()
+      .to(shape1, { morphSVG: shape2, duration: 1 })
+      .to(image1, { opacity: 0, duration: 0.5 }, "-=1")
+      .to(image2, { opacity: 1, duration: 0.5 });
+}
