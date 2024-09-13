@@ -1,0 +1,55 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+.container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+svg {
+    width: 100vw;
+    height: auto; /* アスペクト比を保つ */
+}
+
+.takoyakiShape {
+    width: 100vw;
+    height: auto;
+}
+
+.octopusShape {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    position: absolute; /* 画面のレイアウトに影響しないように絶対配置 */
+}
+
+#octopus {
+    display: none; /* octopusは初期状態で表示されない */
+}
+
+button {
+    position: absolute;
+    bottom: 10%;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #444;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #666;
+}
